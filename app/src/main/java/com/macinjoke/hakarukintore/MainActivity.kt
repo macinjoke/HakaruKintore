@@ -11,6 +11,7 @@ import java.util.TimerTask
 class MainActivity : AppCompatActivity() {
     var timerText: TextView? = null
     var count: Int = 0;
+    private var timer = Timer()
     private val handler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,15 +22,19 @@ class MainActivity : AppCompatActivity() {
 
     fun start(view: View) {
         println("start が押された")
-        val timer = Timer()
         timer.scheduleAtFixedRate(object : TimerTask() {
             override fun run() {
                 count++;
                 handler.post(Runnable {
                     timerText!!.text = "カウント: $count"
                 })
-                println(count)
             }
         }, 0, 1000)
+    }
+
+    fun stop(view: View) {
+        println("cancel が押された")
+        timer.cancel()
+        timer = Timer()
     }
 }
