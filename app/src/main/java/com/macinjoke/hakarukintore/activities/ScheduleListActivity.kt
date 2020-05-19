@@ -1,7 +1,8 @@
-package com.macinjoke.hakarukintore
+package com.macinjoke.hakarukintore.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.macinjoke.hakarukintore.R
 
 class ScheduleListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

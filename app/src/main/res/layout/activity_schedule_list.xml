@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScheduleListActivity">
+    tools:context=".activities.ScheduleListActivity">
 
 <!--    <Button-->
 <!--        android:id="@+id/create_schedule_button"-->
