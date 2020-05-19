@@ -10,7 +10,7 @@ import java.util.TimerTask
 
 class MainActivity : AppCompatActivity() {
     var timerText: TextView? = null
-    var count: Int = 0;
+    var count: Int = 70;
     private var timer = Timer()
     private val handler = Handler()
 
@@ -20,14 +20,24 @@ class MainActivity : AppCompatActivity() {
         timerText = findViewById(R.id.timer_text)
     }
 
+    private fun toTimerString(num: Int): String {
+        val minutes = String.format("%02d", num / 60)
+        val seconds = String.format("%02d", num % 60)
+        return "${minutes}:${seconds}"
+    }
+
     fun start(view: View) {
         println("start が押された")
         timer.scheduleAtFixedRate(object : TimerTask() {
             override fun run() {
-                count++;
-                handler.post(Runnable {
-                    timerText!!.text = "カウント: $count"
-                })
+                if (count > 0) {
+                    count--;
+                    handler.post(Runnable {
+                        timerText!!.text = toTimerString(count)
+                    })
+                } else {
+                    println("count が0になった")
+                }
             }
         }, 0, 1000)
     }
