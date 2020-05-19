@@ -1,5 +1,6 @@
 package com.macinjoke.hakarukintore
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -46,5 +47,11 @@ class MainActivity : AppCompatActivity() {
         println("cancel が押された")
         timer.cancel()
         timer = Timer()
+    }
+
+    fun moveToScheduleList(view: View) {
+        println("スケジュールリストへ移動ボタンが押された")
+        val intent = Intent(this, ScheduleListActivity::class.java)
+        startActivity(intent)
     }
 }

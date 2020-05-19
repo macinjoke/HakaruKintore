@@ -2,4 +2,6 @@
     <string name="app_name">はかる！筋トレ</string>
     <string name="start">START</string>
     <string name="stop">STOP</string>
+    <string name="schedule_list">スケジュール一覧</string>
+    <string name="create_schedule">新しいスケジュール作成</string>
 </resources>
