@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activities.ScheduleListActivity">
 
+<!--    TODO ひとまず時間を設定するやつを置いている。-->
     <Button
         android:id="@+id/create_schedule_button"
         android:layout_width="wrap_content"
@@ -14,6 +15,27 @@
         android:layout_marginEnd="24dp"
         android:onClick="createSchedule"
         android:text="@string/create_schedule"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    TODO てきとうにおいてみたやつ-->
+    <NumberPicker
+        android:id="@+id/numberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    TODO てきとうにおいてみたやつ-->
+    <fragment
+        android:id="@+id/foo"
+        android:name="com.macinjoke.hakarukintore.fragments.BlankFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="236dp"
+        android:layout_marginEnd="96dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
